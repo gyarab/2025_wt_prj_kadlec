@@ -10,3 +10,5 @@ Uživatel tak může pomocí vyhledávání rychle najít požadovaný vůz a p�
 ![User Flow](Images/mobile_wireframes.jpg)
 
 ![Wireframes Desktop](Images/desktop_wireframes.jpg)
+
+![E-R diagram](Images/E-Rdiagram.jpg)
