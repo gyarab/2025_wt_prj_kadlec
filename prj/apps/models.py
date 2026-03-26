@@ -1,7 +1,6 @@
 from django.db import models
 
 class Uzivatel(models.Model):
-    # ID se v Djangu vytvoří automaticky
     jmeno = models.CharField(max_length=150, verbose_name="Jméno")
     email = models.EmailField(unique=True, verbose_name="E-mail")
     heslo = models.CharField(max_length=128, verbose_name="Heslo")
@@ -32,7 +31,6 @@ class Auto(models.Model):
 
 
 class Rezervace(models.Model):
-    # Cizí klíče realizují vztahy 1:N z tvého diagramu
     uzivatel = models.ForeignKey(Uzivatel, on_delete=models.CASCADE, verbose_name="Uživatel")
     auto = models.ForeignKey(Auto, on_delete=models.CASCADE, verbose_name="Auto")
     
