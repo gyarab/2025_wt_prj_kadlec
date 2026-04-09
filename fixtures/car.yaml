@@ -1,0 +1,49 @@
+- model: app.auto
+  pk: 1
+  fields:
+    znacka_a_model: Škoda Octavia III
+    spz: 1AB 1234
+    rok_vyroby: 2019
+    stav_tachometru: 145000
+    prevodovka: Manuální
+    pocet_mist: 5
+
+- model: app.auto
+  pk: 2
+  fields:
+    znacka_a_model: Volkswagen Golf VIII
+    spz: 2BC 5678
+    rok_vyroby: 2022
+    stav_tachometru: 32000
+    prevodovka: Automatická
+    pocet_mist: 5
+
+- model: app.auto
+  pk: 3
+  fields:
+    znacka_a_model: Ford Transit Custom
+    spz: 3CD 9012
+    rok_vyroby: 2018
+    stav_tachometru: 210000
+    prevodovka: Manuální
+    pocet_mist: 9
+
+- model: app.auto
+  pk: 4
+  fields:
+    znacka_a_model: Tesla Model 3
+    spz: EL 123AB
+    rok_vyroby: 2024
+    stav_tachometru: 15000
+    prevodovka: Automatická
+    pocet_mist: 5
+
+- model: app.auto
+  pk: 5
+  fields:
+    znacka_a_model: Toyota Yaris Cross
+    spz: 4DE 3456
+    rok_vyroby: 2023
+    stav_tachometru: 22000
+    prevodovka: Automatická
+    pocet_mist: 5
