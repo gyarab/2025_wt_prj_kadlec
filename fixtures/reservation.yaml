@@ -1,0 +1,49 @@
+- model: app.rezervace
+  pk: 1
+  fields:
+    uzivatel: 1
+    auto: 1
+    datum_vyzvednuti: 2026-05-10
+    misto_vraceni: Pobočka Praha
+    typ_pojisteni: Základní
+    stav: Potvrzeno
+
+- model: app.rezervace
+  pk: 2
+  fields:
+    uzivatel: 2
+    auto: 4
+    datum_vyzvednuti: 2026-06-15
+    misto_vraceni: Letiště Václava Havla
+    typ_pojisteni: Plné krytí
+    stav: Čeká na platbu
+
+- model: app.rezervace
+  pk: 3
+  fields:
+    uzivatel: 1
+    auto: 3
+    datum_vyzvednuti: 2026-07-01
+    misto_vraceni: Pobočka Brno
+    typ_pojisteni: Plné krytí
+    stav: Potvrzeno
+
+- model: app.rezervace
+  pk: 4
+  fields:
+    uzivatel: 4
+    auto: 2
+    datum_vyzvednuti: 2026-04-20
+    misto_vraceni: Pobočka Ostrava
+    typ_pojisteni: Základní
+    stav: Zrušeno
+
+- model: app.rezervace
+  pk: 5
+  fields:
+    uzivatel: 2
+    auto: 5
+    datum_vyzvednuti: 2026-08-05
+    misto_vraceni: Pobočka Praha
+    typ_pojisteni: Rozšířené
+    stav: Čeká na schválení
