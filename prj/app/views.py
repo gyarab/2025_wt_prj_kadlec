@@ -5,4 +5,3 @@ def render_home(request):
 
 def render_about(request):
     return render(request, 'about.html')
-
