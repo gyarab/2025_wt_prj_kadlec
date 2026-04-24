@@ -1,0 +1,31 @@
+- model: app.uzivatel
+  pk: 1
+  fields:
+    jmeno: Jan Novák
+    email: jan.novak@example.cz
+    heslo: heslo123
+    role: Zákazník
+
+- model: app.uzivatel
+  pk: 2
+  fields:
+    jmeno: Petra Svobodová
+    email: petra.svobodova@example.cz
+    heslo: tajneheslo456
+    role: Zákazník
+
+- model: app.uzivatel
+  pk: 3
+  fields:
+    jmeno: Karel Dvořák
+    email: karel.admin@autopujcovna.cz
+    heslo: admin_secure_999
+    role: Administrátor
+
+- model: app.uzivatel
+  pk: 4
+  fields:
+    jmeno: Eva Kučerová
+    email: eva.kucerova@example.cz
+    heslo: auto2026
+    role: Zákazník
