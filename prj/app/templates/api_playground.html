@@ -1,0 +1,57 @@
+{% extends 'base.html' %}
+
+{% block title %} API Playground {% endblock %}
+
+{% block content %}
+<div class="container mt-4">
+    <h2>API Playground</h2>
+    <p>Na této stránce testujeme volání asynchronního API pomocí <code>fetch()</code> v čistém JavaScriptu.</p>
+    
+    <button id="load-cars-btn" class="btn btn-primary mb-3">Načíst seznam aut</button>
+    
+    <div id="cars-container" class="mt-4">
+        
+    </div>
+</div>
+
+<script>
+    document.getElementById('load-cars-btn').addEventListener('click', () => {
+        const container = document.getElementById('cars-container');
+        container.innerHTML = '<p>Načítám data z API...</p>';
+        
+      
+        fetch('/api/auto')
+            .then(response => {
+                if (!response.ok) {
+                    throw new Error(`Chyba při komunikaci s API: status ${response.status}`);
+                }
+                
+                return response.json(); 
+            })
+            .then(data => {
+             
+                container.innerHTML = '<h3>Dotazovaná auta (z GET /api/auto):</h3><ul class="list-group"></ul>';
+                const ul = container.querySelector('ul');
+                
+                if (data.length === 0) {
+                    ul.innerHTML = '<li class="list-group-item text-muted">Zatím neevidujeme žádná auta.</li>';
+                } else {
+                    data.forEach(auto => {
+                        const li = document.createElement('li');
+                        li.className = 'list-group-item d-flex justify-content-between align-items-center';
+                        li.innerHTML = `
+                            <span><strong>${auto.znacka_a_model}</strong></span>
+                            <span class="badge bg-secondary rounded-pill">SPZ: ${auto.spz}</span>
+                        `;
+                        ul.appendChild(li);
+                    });
+                }
+            })
+            .catch(error => {
+              
+                console.error('Nastala chyba z fetch:', error);
+                container.innerHTML = `<div class="alert alert-danger" role="alert">Při načítání dat došlo k chybě: ${error.message}</div>`;
+            });
+    });
+</script>
+{% endblock %}
